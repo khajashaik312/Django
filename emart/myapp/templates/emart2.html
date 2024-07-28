@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<style>
+header
+{
+ font-size: xx-large;
+ text-shadow: 2px red;
+ font-style: italic;
+}
+table,tr,th,td
+{
+ border: 2px solid black; 
+ border-collapse: collapse;
+ padding: 10px;
+}
+th
+{
+    background-color: rgb(253, 2, 2);
+}
+td
+{
+    background-color: green;
+}
+.blink {
+            animation: blinker 1.5s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+</style>
+<body>
+    <center>
+        <header>EMART DEALERS FORM</header> <br><br>
+            <table>
+                <tr>
+                    <th> ID:</th>             
+                    <th>GST:</th>     
+                    <th>Bill No:</th>      
+                    <th>Purchase Date:</th>  
+                    <th>Dealer Name:</th> 
+                    <th>Phone Number:</th> 
+                    <th>Product Name:</th> 
+                    <th class="blink"> Number of Pieces:</th>
+                    <th> Price per Piece:</th>
+                    <th>Total Bill:</th>
+                </tr>
+                {% for i in detailes %}
+                <tr >
+                    <td>{{i.0}}</td>
+                    <td>{{i.1}}</td>
+                    <td>{{i.2}}</td>
+                    <td>{{i.3}}</td>
+                    <td>{{i.4}}</td> 
+                    <td>{{i.5}}</td>
+                    <td>{{i.6}}</td>
+                    <td>{{i.7}}</td>
+                    <td>{{i.8}}</td>
+                    <td>{{i.9}}</td>
+                {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
