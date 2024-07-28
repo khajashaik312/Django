@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<center>
+	<h1>Database information</h1>
+	<table border="2px">
+		<tr bgcolor="yellow">
+			<td><strong>Name</strong></td>
+			<td><strong>ID</strong></td>
+			<td><strong>Roll</strong></td>
+			<td><strong>Marks</strong></td>
+			<td><strong>DOB</strong></td>
+			<td><strong>E-mail</strong></td>
+		</tr>
+		{%for i in stud%}
+		<tr>
+			<td>{{i.name}}</td>
+			<td>{{i.id}}</td>
+			<td>{{i.roll}}</td>
+			<td>{{i.marks}}</td>
+			<td>{{i.dob}}</td>
+			<td>{{i.email}}</td>
+		</tr>
+		{%endfor%}
+	</table>
+</center>
+</body>
+</html>
