@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+        position: relative; 
+    }
+    </style>
+  </head>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://127.0.0.1:8000/bootstrap1/">Taleem</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Arabi</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/bootstrap2/">Noorani Qaida</a></li>
+                <li><a class="dropdown-item" href="#">Anzum Para</a></li>
+                <li><a class="dropdown-item" href="#">Panzum Para</a></li>
+              </ul>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Urdu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Namaz Time Table</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kalmas & Surahs</a>
+        </li>  
+      </ul>
+    </div>
+    
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" href="#">SignUp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LogIn</a>
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Languages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'bootstrap2' %}">English</a></li>
+            <li><a class="dropdown-item" href="{% url 'tel' %}">తెలుగు</a></li>
+            <li><a class="dropdown-item" href="{% url 'hin' %}">हिंदी</a></li>
+          </ul>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">Section 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Section 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Section 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+ 
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:60px 20px;">
+  <h1></h1>
+  <div class="container mt-3">            
+    <table class="table table-dark table-hover" style="font-size: large;">
+      <thead>
+        <tr><theader>Bismillah Hir Rahman Nir Rahim</theader></tr>
+      </thead>
+      <tbody>
+        <tr><td>ح</td> <td>ج</td> <td>ث</td> <td>ت</td> <td>ب</td> <td>ا</td></tr>
+        <tr><td>H-aa</td> <td>j-eem</td> <td>th-aa(s-aa)</td> <td>t-aa</td> <td>b-aa</td> <td>a-lif</td></tr>
+        <tr><td>س</td> <td>ز</td> <td>ر</td> <td>ذ</td> <td>د</td> <td>خ</td></tr> 
+        <tr><td>s-een</td> <td>z-aa</td> <td>r-aa</td> <td>dh-aal(Z-aal)</td> <td>d-aal</td> <td>kh-aa</td></tr>
+        <tr><td>ع</td> <td>ظ</td> <td>ط</td> <td>ض</td> <td>ص</td> <td>ش</td></tr>
+        <tr><td>ah-ain</td> <td>Dh-aa(Zw-aa)</td> <td>Tw-aa</td> <td>D-aad(Zw-aad)</td> <td>Sw-aad</td> <td>sh-een</td></tr>
+        <tr><td>م</td> <td>ل</td> <td>ك</td> <td>ق</td> <td>ف</td> <td>غ</td></tr>
+        <tr><td>m-eem</td> <td>l-aam</td> <td>k-aaf</td> <td>q-aaf</td> <td>f-aa</td> <td>gh-ain</td></tr>
+        <tr><td>ے</td> <td>ى</td> <td>ء</td> <td>ه</td> <td>و</td> <td>ن</td></tr>
+        <tr><td>y-aa</td> <td>y-aa</td> <td>ham-jaa</td> <td>h-a</td> <td>w-aaw</td> <td>n-oon</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <h1>Section 2</h1>
+  <div class="container mt-3">            
+    <table class="table table-dark table-hover" style="font-size: large;">
+      <thead>
+        <tr><theader>Bismillah Hir Rahman Nir Rahim</theader></tr>
+      </thead>
+      <tbody>
+        <tr><td>ح</td> <td>ج</td> <td>ث</td> <td>ت</td> <td>ب</td> <td>ا</td></tr>
+        <tr><td>H-aa</td> <td>j-eem</td> <td>th-aa(s-aa)</td> <td>t-aa</td> <td>b-aa</td> <td>a-lif</td></tr>
+        <tr><td>س</td> <td>ز</td> <td>ر</td> <td>ذ</td> <td>د</td> <td>خ</td></tr> 
+        <tr><td>s-een</td> <td>z-aa</td> <td>r-aa</td> <td>dh-aal(Z-aal)</td> <td>d-aal</td> <td>kh-aa</td></tr>
+        <tr><td>ع</td> <td>ظ</td> <td>ط</td> <td>ض</td> <td>ص</td> <td>ش</td></tr>
+        <tr><td>ah-ain</td> <td>Dh-aa(Zw-aa)</td> <td>Tw-aa</td> <td>D-aad(Zw-aad)</td> <td>Sw-aad</td> <td>sh-een</td></tr>
+        <tr><td>م</td> <td>ل</td> <td>ك</td> <td>ق</td> <td>ف</td> <td>غ</td></tr>
+        <tr><td>m-eem</td> <td>l-aam</td> <td>k-aaf</td> <td>q-aaf</td> <td>f-aa</td> <td>gh-ain</td></tr>
+        <tr><td>ے</td> <td>ى</td> <td>ء</td> <td>ه</td> <td>و</td> <td>ن</td></tr>
+        <tr><td>y-aa</td> <td>y-aa</td> <td>ham-jaa</td> <td>h-a</td> <td>w-aaw</td> <td>n-oon</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="section3" class="container-fluid bg-secondary text-white" style="padding:100px 20px;">
+  <h1>Section 3</h1>
+  <div class="container mt-3">            
+    <table class="table table-dark table-hover" style="font-size: large;">
+      <thead>
+        <tr><theader>Bismillah Hir Rahman Nir Rahim</theader></tr>
+      </thead>
+      <tbody>
+        <tr><td>ح</td> <td>ج</td> <td>ث</td> <td>ت</td> <td>ب</td> <td>ا</td></tr>
+        <tr1><td >H-aa</td> <td>j-eem</td> <td>th-aa(s-aa)</td> <td>t-aa</td> <td>b-aa</td> <td>a-lif</td></tr1>
+        <tr><td>س</td> <td>ز</td> <td>ر</td> <td>ذ</td> <td>د</td> <td>خ</td></tr> 
+        <tr2><td>s-een</td> <td>z-aa</td> <td>r-aa</td> <td>dh-aal(Z-aal)</td> <td>d-aal</td> <td>kh-aa</td></tr2>
+        <tr><td>ع</td> <td>ظ</td> <td>ط</td> <td>ض</td> <td>ص</td> <td>ش</td></tr>
+        <tr3><td>ah-ain</td> <td>Dh-aa(Zw-aa)</td> <td>Tw-aa</td> <td>D-aad(Zw-aad)</td> <td>Sw-aad</td> <td>sh-een</td></tr3>
+        <tr><td>م</td> <td>ل</td> <td>ك</td> <td>ق</td> <td>ف</td> <td>غ</td></tr>
+        <tr4><td>m-eem</td> <td>l-aam</td> <td>k-aaf</td> <td>q-aaf</td> <td>f-aa</td> <td>gh-ain</td></tr4>
+        <tr><td>ے</td> <td>ى</td> <td>ء</td> <td>ه</td> <td>و</td> <td>ن</td></tr>
+        <tr5><td>y-aa</td> <td>y-aa</td> <td>ham-jaa</td> <td>h-a</td> <td>w-aaw</td> <td>n-oon</td></tr5>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
