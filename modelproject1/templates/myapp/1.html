@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	<h1>Employeeinfo</h1>
+	<table border="2">
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Designation</td>
+			<td>DOB</td>
+			<td>EXPERIENCE</td>
+			<td>SALARY</td>
+		</tr>
+		{%for i in emp%}
+		<tr>
+			<td>{{i.eid}}</td>
+			<td>{{i.ename}}</td>
+			<td>{{i.edesig}}</td>
+			<td>{{i.edob}}</td>
+			<td>{{i.eexp}}</td>
+			<td>{{i.esal}}</td>
+		</tr>
+		{%endfor%}
+	</table>
+</body>
+</html>
