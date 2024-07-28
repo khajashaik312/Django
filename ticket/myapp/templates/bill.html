@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tab{border: 1px solid black;
+    }
+</style>
+<body>
+    <center>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <h2>Ticket Booking Form</h2><br>
+
+        <div class="tab"><br><br>
+        {{ticketform.BoardingPoint.label}}: {{ticketform.BoardingPoint}} <br><br>
+        {{ticketform.DestinationPoint.label}}: {{ticketform.DestinationPoint}} <br><br>
+        {{ticketform.NoofPassengers.label}}: {{ticketform.NoofPassengers}} <br><br>
+        {{ticketform.PassengerName.label}}: {{ticketform.PassengerName}} <br><br>
+        {{ticketform.PassengerAge.label}}: {{ticketform.PassengerAge}} <br><br>
+        {{ticketform.Category.label}}: {{ticketform.Category}} <br><br>
+        {{ticketform.Gender.label}}: {{ticketform.Gender}} <br><br>
+        {{ticketform.ServiceCategory.label}}: {{ticketform.ServiceCategory}} <br><br>
+        {{ticketform.DepartOn.label}}: {{ticketform.DepartOn}} <br><br>
+        {{ticketform.ArrivalOn.label}}: {{ticketform.ArrivalOn}} <br><br>
+        <!--{{ticketform.DepartTimeOrigin.label}}: {{ticketform.DepartTimeOrigin}} <br><br>
+        {{ticketform.ArrivalTime.label}}: {{ticketform.ArrivalTime}} <br><br><br>-->
+        {{ticketform.SeatNo.label}}: {{ticketform.SeatNo}} <br><br>
+        <input type="submit" value="Book Ticket"><br><br><br>
+    </div>
+    </form>
+    <table style="float:center;">
+        <tr style="background-color: orange;">
+            <th><input type="checkbox">01 W</th>
+            <th><input type="checkbox">07 W</th>
+            <th><input type="checkbox">08 W</th>
+            <th><input type="checkbox">15 W</th>
+            <th><input type="checkbox">16 W</th>
+            <th><input type="checkbox">23 W</th>
+            <th><input type="checkbox">24 W</th>
+            <th><input type="checkbox">31 W</th>
+            <th><input type="checkbox">32 W</th>
+        </tr>
+        <br>
+        <tr style="background-color:green">
+            <th><input type="checkbox">02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th><input type="checkbox">33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <br>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td style="background-color: green;"><input type="checkbox">34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <br>
+        <tr>
+            <td rowspan="1"></td>               
+            <th style="background-color: green;"><input type="checkbox">05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th style="background-color: green;"><input type="checkbox">35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <br>
+        <tr style="background-color: orange;">
+            <th><input type="checkbox">03 W</th>
+            <th><input type="checkbox">04 W</th>
+            <th><input type="checkbox">11 W</th>
+            <th><input type="checkbox">12 W</th>
+            <th><input type="checkbox">19 W</th>
+            <th><input type="checkbox">20 W</th>
+            <th><input type="checkbox">27 W</th>
+            <th><input type="checkbox">28 W</th>
+            <th><input type="checkbox">36 W</th>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

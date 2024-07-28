@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{background-color: pink;}
+    *{padding:0;
+    margin: 10;}
+    .header{text-align: left;margin: 10px;
+    padding-left: -10px;}
+    
+    .border{border: 1px solid black;}
+    
+    .left.tab1 table th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        
+    }
+    tr th{
+        padding: 20px;
+    }
+    .tab1 th{float:center;}
+    .tab1 table th{
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+    .left .tab1 table{float:left;padding-left: 250px;}
+    .tab2 table,th,td{border: 1px solid black;border-collapse: collapse;
+    text-align: center;}
+
+    .tab2 table th,td{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+</style>
+<body>
+    <center>
+        <div class="border">
+            <div class="header">
+                <h3>TELANGANA STATE ROAD TRANSPORT CORPORATION</h3>
+                <p>Hyderabad - 500624, Telangana, India.</p>
+                <p>Telephone No.: 040 69440000 / 040 23450033</p>
+                <p>AbhiBus CustomerCare No.: 040-61656789</p>
+                <p>E-Mail: <a href="#">support@abhibus.com</a></p>
+            </div>
+            <hr> <br>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                Enter Passenger Name: <input type="text" name="psgname1">
+                <input type="submit" value="Get Ticket">
+            </form> <br><br>
+            {% for i in detailes %}
+            <div class="left">
+            <div class="tab1">
+            <table>
+            <thead>
+                <tr style="background-color: green;">
+                    <th>Ticket No.:</th>
+                    <th style="background-color: orange;">{{i.0}}</th> 
+                </tr>
+                <tr>
+                    <th>Booking ID:</th>  
+                    <th>789456</th>  
+                </tr>
+                <tr>
+                    <th>Service Code/Name:</th>  
+                    <th>9245</th>  
+                </tr>
+                <tr>
+                    <th>From:</th>  
+                    <th>{{i.1}}</th>  
+                </tr>
+                <tr>
+                    <th>PickUp Point:</th>    
+                    <th>Bus Stand</th>
+                </tr>
+                <tr>
+                    <th>PickUp Address:</th> 
+                    <th>Bus Stand</th>
+                </tr>
+                <tr>
+                    <th>No.of Seats:</th>
+                    <th>{{i.3}}</th>
+                </tr>
+                <tr>
+                    <th>User Code:</th>   
+                    <th>FESTIVAL</th> 
+                </tr>
+                <tr>
+                    <th>Status:</th>   
+                    <th>{{i.11}}</th> 
+                </tr>
+            </thead>
+        </table>
+        <table style="float:center-left">
+            <thead>
+                <tr>
+                    <th>UID Number:</th>
+                    <th>123456</th>
+                </tr>
+                <tr>
+                    <th>Date of Journey:</th>
+                    <th>{{i.9}}</th>
+                </tr>
+                <tr>
+                    <th>Service Category:</th>
+                    <th>{{i.8}}</th>
+                </tr>
+                <tr>
+                    <th>To:</th>
+                    <th>{{i.2}}</th>
+                </tr>
+                <tr>
+                    <th>Drop Point:</th>
+                    <th>Bus Stand</th>
+                </tr>
+                <tr>
+                    <th>Depart On:</th>
+                    <th>{{i.9}}</th>
+                </tr>
+                <tr>
+                    <th>Arrival On:</th>
+                    <th>{{i.10}}</th>
+                </tr>
+                <tr>
+                    <th>Start Time of Origin:</th>
+                    <th>20.00 P.M</th>
+                </tr>
+                <tr>
+                    <th>OB Ref, No.:</th>
+                    <th>OB82909877J</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        {% endfor %}
+    
+        <h2>Passanger Details</h2>
+        {% for i in detailes %}
+        <div class="tab2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Passenger Name</th>
+                        <th>Age</th>
+                        <th>Category</th>
+                        <th>Gender</th>
+                        <th>Seat No.</th>
+                    </tr>
+                </div>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>{{i.4}}</td>
+                        <td>{{i.5}}</td>
+                        <td>{{i.6}}</td>
+                        <td>{{i.7}}</td>
+                        <td>{{i.12}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            {% endfor %}
+            <button>Print</button>
+            <br><br>
+        </div>
+    </center>
+</body>
+</html>
