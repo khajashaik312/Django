@@ -1,0 +1,17 @@
+from faker import Faker
+#faker-->module Faker-->class
+f=Faker()
+name=f.name()
+print("Genrated fake name=",name)
+address=f.address()
+print("Genrated fake address=",address)
+text=f.text()
+print("Genrated fake text=",text)
+date=f.date()
+print("Genrated fake date=",date)
+dob=f.date_of_birth()
+print("Genrated fake dob=",dob)
+random=f.random_int(min=10,max=100)
+print("Genrated fake number=",random)
+email=f.email()
+print("Genrated fake email=",email)
