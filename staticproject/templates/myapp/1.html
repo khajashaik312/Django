@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+	<link rel="stylesheet"href="{% static "css/1.css" %}">
+</head>
+<body bgcolor="#541c18">
+	<center>
+		<h1><u>{{name}}'s favourites</u></h1>
+	</center>
+	<div>
+		<h2>player:{{player}}</h2>
+		<h3><a href="https://en.wikipedia.org/wiki/ms_dhoni">click here</a></h3>
+		<img src="{% static "images/kaz.jpg.jpg" %}" alt="not available">
+	</div>
+	<div>
+		<h2>animal:{{animal}}</h2>
+		<h3><a href="https://en.wikipedia.org/wiki/ms_dhoni">click here</a></h3>
+				<img src="{% static "images/kaz.jpg.jpg" %}" alt="not available">
+	</div>
+    <div>
+		<h2>subject:{{subject}}</h2>
+		<h3><a href="https://en.wikipedia.org/wiki/ms_dhoni">click here</a></h3>
+			<img src="{% static "images/kaz.jpg.jpg" %}" alt="not available">
+	</div>
+	<br><br>
+</body>
+</html>
